@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./components/layout/Header";
 
 // Adding only the Roboto font
 const roboto = localFont({
@@ -18,7 +19,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${roboto.variable} antialiased`}>
         <main className="max-w-4xl mx-auto p-4">
+          <Header/>
           {children}
+          <footer className="border-t p-8 text-center text-gray-500 mt-16 max-w-full">
+            &copy; 2023 All rights reserved
+          </footer>
         </main>
       </body>
     </html>
